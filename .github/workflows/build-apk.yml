@@ -1,0 +1,76 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # El runner de Ubuntu ya trae el Android SDK preinstalado.
+      # NO usamos android-actions/setup-android porque intenta instalar
+      # el paquete 'tools', que Google elimino del SDK moderno.
+      - name: Install required Android SDK packages
+        run: |
+          SDKMANAGER=$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f | head -n 1)
+          echo "Usando sdkmanager: $SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          "$SDKMANAGER" "platform-tools" "platforms;android-34" "build-tools;34.0.0" || true
+
+      # CLAVE: forzar Gradle 8.9. El AGP 8.5.2 NO es compatible con Gradle 9.x.
+      - name: Setup Gradle 8.9
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build debug APK
+        run: gradle assembleDebug --stacktrace --no-daemon
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LupaFacil-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          # Evita que la cuota de almacenamiento de GitHub se llene:
+          # el APK se borra automaticamente 1 dia despues de subirlo.
+          # Puedes subirlo hasta 90 (respetando el maximo de tu cuenta/org).
+          retention-days: 1
+
+  cleanup:
+    # Borra los APKs viejos y conserva solo los 5 mas recientes,
+    # para que la cuota no vuelva a llenarse.
+    runs-on: ubuntu-latest
+    needs: build
+    if: always()
+    permissions:
+      actions: write
+    steps:
+      - name: Delete old APK artifacts (keep 5 most recent)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          IDS=$(gh api "repos/${{ github.repository }}/actions/artifacts?name=LupaFacil-debug-apk&per_page=100" \
+            --jq '[.artifacts[] | select(.expired == false)] | sort_by(.created_at) | reverse | .[5:] | .[].id')
+          if [ -z "$IDS" ]; then
+            echo "No hay artifacts viejos para borrar."
+          else
+            echo "$IDS" | while read -r id; do
+              echo "Borrando artifact $id..."
+              gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id"
+            done
+          fi
