@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LupaFacil</string>
+    <string name="subtitle">Diseñada especialmente para Dilcia Mercedes\nCreada con ♥ K3iiner</string>
+
+    <!-- ============ DEDICATORIA ============ -->
+    <string name="dedication_short">Diseñada con cariño para\nDilcia Mercedes</string>
+    <string name="dedication_full">Esta aplicación fue creada pensando en ti,\npara que puedas ver el mundo con más claridad.</string>
+    <string name="created_by">Creada con ♥ por K3iiner</string>
+    <string name="dedication_help_title">Con cariño para</string>
+    <string name="dedication_help_name">Dilcia Mercedes</string>
+
+    <!-- ============ BOTONES PRINCIPALES ============ -->
+    <string name="btn_zoom_out">−\nAlejar</string>
+    <string name="btn_zoom_in">+\nAcercar</string>
+    <string name="btn_reset">↺\nNormal</string>
+    <string name="btn_colors">◉\nColores</string>
+    <string name="btn_lens">🔍\nLupa</string>
+    <string name="btn_screen_lens">🖥\nPantalla</string>
+    <string name="btn_read">▣\nLeer</string>
+    <string name="btn_settings">⚙\nAjustes</string>
+    <string name="btn_help">❓\nAyuda</string>
+
+    <!-- ============ MODO FACIL ============ -->
+    <string name="easy_mode_title">Modo Fácil</string>
+    <string name="easy_zoom_in">➕\nACERCAR</string>
+    <string name="easy_zoom_out">➖\nALEJAR</string>
+    <string name="easy_read">🔊\nLEER EN VOZ ALTA</string>
+    <string name="easy_exit">Salir del Modo Fácil</string>
+
+    <!-- ============ ESTADOS Y MENSAJES ============ -->
+    <string name="zoom_label">Zoom %1$.1fx</string>
+    <string name="camera_permission_needed">Se necesita permiso de cámara para usar la lupa</string>
+    <string name="grant_permission">Conceder permiso</string>
+    <string name="no_text_detected">No se detectó texto en la imagen.</string>
+    <string name="analyzing">Analizando texto, un momento.</string>
+    <string name="camera_unavailable">Cámara no disponible.</string>
+    <string name="reading_text">Leyendo el texto en voz alta</string>
+    <string name="reading_image">Describiendo la imagen</string>
+
+    <!-- ============ AJUSTES ============ -->
+    <string name="settings_title">Ajustes</string>
+    <string name="brightness">Brillo</string>
+    <string name="contrast">Contraste</string>
+    <string name="speech_rate">Velocidad de voz</string>
+    <string name="font_scale">Tamaño de texto</string>
+    <string name="lens_zoom">Aumento de la lupa</string>
+    <string name="close">Cerrar</string>
+    <string name="open_android_settings">Ajustes de accesibilidad de Android</string>
+
+    <!-- ============ INTERRUPTORES (lo que se lee) ============ -->
+    <string name="switch_section_title">¿Qué quieres que lea en voz alta?</string>
+    <string name="switch_read_text">Leer el texto escaneado</string>
+    <string name="switch_read_text_desc">Cuando toques "Leer", la app dirá el texto en voz alta</string>
+    <string name="switch_show_text">Mostrar el texto en pantalla</string>
+    <string name="switch_show_text_desc">El texto escaneado aparece en un panel grande sobre la cámara</string>
+    <string name="switch_read_image">Describir la imagen</string>
+    <string name="switch_read_image_desc">La app dirá qué colores y formas ve en la imagen</string>
+    <string name="switch_vibration">Vibración al tocar</string>
+    <string name="switch_vibration_desc">El teléfono vibra suavemente al pulsar un botón</string>
+    <string name="switch_confirm_actions">Confirmar con voz</string>
+    <string name="switch_confirm_actions_desc">La app dice en voz alta lo que haces (ej: "Zoom 2x")</string>
+    <string name="switch_easy_mode">Modo Fácil</string>
+    <string name="switch_easy_mode_desc">Solo 3 botones gigantes, más simple de usar</string>
+
+    <string name="vibration_on">Vibración: ACTIVADA</string>
+    <string name="vibration_off">Vibración: DESACTIVADA</string>
+
+    <!-- ============ TUTORIAL / AYUDA ============ -->
+    <string name="tutorial_title">Bienvenido a LupaFacil</string>
+    <string name="tutorial_step1_title">1. Activa la lupa</string>
+    <string name="tutorial_step1_text">Toca el botón ACTIVAR y acepta los permisos que pida el teléfono. La lupa aparecerá flotando en tu pantalla.</string>
+    <string name="tutorial_step2_title">2. Arrástrala sobre el texto</string>
+    <string name="tutorial_step2_text">Abre WhatsApp, el navegador o la app que quieras, y mueve el círculo con el dedo hasta ponerlo sobre lo que quieras leer más grande.</string>
+    <string name="tutorial_step3_title">3. Agranda con + y −</string>
+    <string name="tutorial_step3_text">Usa los botones + y − de la lupa para acercar o alejar. También puedes pellizcar con dos dedos. ¡Así de fácil!</string>
+    <string name="tutorial_next">Siguiente</string>
+    <string name="tutorial_start">¡Empezar a usar!</string>
+    <string name="tutorial_skip">Saltar</string>
+
+    <string name="help_title">Cómo usar LupaFacil</string>
+    <string name="help_text">Esta lupa amplía la PANTALLA de tu teléfono y flota sobre cualquier app (WhatsApp, navegador, mensajes…).
+
+• ACTIVAR: enciende la lupa (pide unos permisos la primera vez)
+
+• ARRASTRAR: mueve el círculo con el dedo hasta el texto que quieras leer
+
+• + / −: más o menos aumento (también con pinza de dos dedos)
+
+• II (azul): congela la imagen para leer con calma; tócalo otra vez para seguir
+
+• ⌖ (verde): vuelve a centrar la lupa en la pantalla
+
+• Doble toque en la lupa: cambia su tamaño
+
+• ✕: apaga la lupa
+
+Consejo: si la lupa está activa y quieres quitarla, vuelve a esta pantalla y pulsa \"Detener\".</string>
+
+    <!-- ============ LUPA FLOTANTE ============ -->
+    <string name="floating_lens_title">Lupa flotante</string>
+    <string name="floating_lens_help">Esta lupa amplía la PANTALLA de tu teléfono y flota sobre cualquier app (WhatsApp, navegador, mensajes…).
+
+• ACTIVAR: enciende la lupa (pide unos permisos la primera vez)
+
+• La lupa se ve como un círculo limpio. TÓCALA una vez para ver sus botones; se esconden solos
+
+• ARRASTRAR: mueve la lupa con el dedo hasta el texto que quieras leer
+
+• + / −: más o menos aumento (también con pinza de dos dedos)
+
+• II (azul): congela la imagen para leer con calma; tócalo otra vez para seguir
+
+• ⌖ (verde): vuelve a centrar la lupa en la pantalla
+
+• Doble toque en la lupa: cambia su tamaño
+
+• ✕: apaga la lupa
+
+• BARRA DE LECTURA: en esta pantalla puedes cambiar el círculo por una franja horizontal, ideal para leer renglón por renglón
+
+Consejo: si la lupa está activa y quieres quitarla, vuelve a esta pantalla y pulsa \"Detener\".</string>
+    <string name="floating_lens_start">▶  ACTIVAR LUPA FLOTANTE</string>
+    <string name="floating_lens_help_btn">❓\nAyuda</string>
+    <string name="floating_lens_stop">■  Detener la lupa</string>
+    <string name="floating_lens_shape">Forma de la lupa</string>
+    <string name="floating_lens_size">Tamaño de la lupa</string>
+    <string name="floating_lens_zoom">Aumento de la lupa</string>
+    <string name="btn_floating_lens">🪟\nFlotante</string>
+    <string name="btn_back">←\nVolver</string>
+
+    <!-- ============ FEEDBACK GRANDE ============ -->
+    <string name="feedback_zoom_in">Acercando</string>
+    <string name="feedback_zoom_out">Alejando</string>
+    <string name="feedback_reset">Tamaño normal</string>
+    <string name="feedback_color">Cambiando color</string>
+    <string name="feedback_lens_on">Lupa activada</string>
+    <string name="feedback_lens_off">Lupa desactivada</string>
+    <string name="feedback_reading">Leyendo…</string>
+
+    <string name="ocr_error">No se pudo leer el texto: %1$s</string>
+    <string name="settings_unavailable">No se pudieron abrir los ajustes del sistema</string>
+    <string name="easy_mode_activated">Modo fácil activado. Tienes tres botones grandes.</string>
+</resources>

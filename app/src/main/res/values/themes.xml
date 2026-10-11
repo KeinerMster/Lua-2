@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ============================================================
+         TEMA PRINCIPAL — LupaFacil Design System
+         ============================================================ -->
+    <style name="Theme.LupaFacil" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores de marca -->
+        <item name="colorPrimary">@color/brand_amber</item>
+        <item name="colorOnPrimary">@color/brand_on_amber</item>
+        <item name="colorPrimaryContainer">@color/brand_amber_dark</item>
+        <item name="colorOnPrimaryContainer">@color/brand_on_amber</item>
+
+        <!-- Superficies -->
+        <item name="android:colorBackground">@color/surface_0</item>
+        <item name="colorSurface">@color/surface_1</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_2</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Bordes -->
+        <item name="colorOutline">@color/border_subtle</item>
+        <item name="colorOutlineVariant">@color/border_strong</item>
+
+        <!-- Estados -->
+        <item name="colorError">@color/state_error</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Barras del sistema -->
+        <item name="android:statusBarColor">@color/surface_0</item>
+        <item name="android:navigationBarColor">@color/surface_0</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Tipografía -->
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+
+        <!-- Animaciones -->
+        <item name="android:windowAnimationStyle">@style/Animation.LupaFacil</item>
+    </style>
+
+    <!-- Animaciones de ventana -->
+    <style name="Animation.LupaFacil" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- ============================================================
+         BOTONES — Sistema de botones profesional
+         ============================================================ -->
+
+    <!-- Botón principal: ámbar sólido, esquinas redondeadas, elevación -->
+    <style name="BigButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/text_on_amber</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:stateListAnimator">@animator/button_elevation</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Botón secundario: superficie oscura con borde -->
+    <style name="BigButtonSecondary" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_secondary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:stateListAnimator">@animator/button_elevation</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <!-- Botón gigante (modo fácil) -->
+    <style name="HugeButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/text_on_amber</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:stateListAnimator">@animator/button_elevation</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <!-- Botón de peligro (detener) -->
+    <style name="DangerButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_danger</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:stateListAnimator">@animator/button_elevation</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- ============================================================
+         TARJETAS Y PANELES
+         ============================================================ -->
+
+    <!-- Tarjeta de superficie -->
+    <style name="CardSurface">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Panel flotante (overlay) -->
+    <style name="PanelOverlay">
+        <item name="android:background">@drawable/bg_panel</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- ============================================================
+         TIPOGRAFÍA — Escala tipográfica profesional
+         ============================================================ -->
+
+    <!-- Estilo base (necesario para la herencia implícita de Text.*) -->
+    <style name="Text" />
+
+    <style name="Text.Display">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="Text.Headline">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="Text.Body">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+
+    <style name="Text.BodySecondary">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="Text.Label">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/brand_amber</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Alias de compatibilidad -->
+    <style name="BigTitle" parent="Text.Headline" />
+    <style name="BigBody" parent="Text.Body" />
+
+    <!-- ============================================================
+         COMPONENTES ESPECÍFICOS
+         ============================================================ -->
+
+    <!-- Chip de estado (indicador de zoom) -->
+    <style name="StatusChip">
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:textColor">@color/brand_amber</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Barra de controles -->
+    <style name="ControlBarStyle">
+        <item name="android:background">@drawable/bg_control_bar</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <!-- Divisor -->
+    <style name="Divider">
+        <item name="android:background">@color/border_subtle</item>
+    </style>
+
+</resources>

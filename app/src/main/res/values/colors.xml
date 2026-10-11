@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================================
+         SISTEMA DE COLOR — LupaFacil Design System
+         Paleta profesional con jerarquía clara y alto contraste.
+         ============================================================ -->
+
+    <!-- Base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Marca (ámbar accesible) -->
+    <color name="brand_amber">#FFFFD400</color>
+    <color name="brand_amber_dark">#FFE6A800</color>
+    <color name="brand_amber_light">#FFFFE566</color>
+    <color name="brand_on_amber">#FF1A1A1A</color>
+
+    <!-- Superficies (jerarquía de profundidad) -->
+    <color name="surface_0">#FF000000</color>
+    <color name="surface_1">#FF0D0D0D</color>
+    <color name="surface_2">#FF1A1A1A</color>
+    <color name="surface_3">#FF262626</color>
+    <color name="surface_4">#FF333333</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB3B3B3</color>
+    <color name="text_disabled">#FF666666</color>
+    <color name="text_on_amber">#FF1A1A1A</color>
+
+    <!-- Bordes y divisores -->
+    <color name="border_subtle">#FF2E2E2E</color>
+    <color name="border_strong">#FF4D4D4D</color>
+
+    <!-- Estados -->
+    <color name="state_success">#FF4CAF50</color>
+    <color name="state_warning">#FFFF9800</color>
+    <color name="state_error">#FFF44336</color>
+    <color name="state_info">#FF2196F3</color>
+
+    <!-- Overlays (transparencias) -->
+    <color name="overlay_scrim">#CC000000</color>
+    <color name="overlay_panel">#E6000000</color>
+    <color name="overlay_light">#99000000</color>
+    <color name="overlay_bar">#F20D0D0D</color>
+
+    <!-- ============================================================
+         ALIAS (compatibilidad con código existente)
+         ============================================================ -->
+    <color name="amber">@color/brand_amber</color>
+    <color name="amber_dark">@color/brand_amber_dark</color>
+    <color name="bar_bg">@color/overlay_bar</color>
+    <color name="overlay_bg">@color/overlay_panel</color>
+    <color name="overlay_bg_light">@color/overlay_light</color>
+
+    <color name="btn_primary">@color/brand_amber</color>
+    <color name="btn_primary_text">@color/brand_on_amber</color>
+    <color name="btn_secondary">@color/surface_3</color>
+    <color name="btn_secondary_text">@color/text_primary</color>
+    <color name="btn_danger">@color/state_error</color>
+    <color name="btn_danger_text">@color/white</color>
+    <color name="btn_success">@color/state_success</color>
+    <color name="btn_success_text">@color/white</color>
+
+    <color name="feedback_bg">@color/overlay_panel</color>
+    <color name="feedback_text">@color/brand_amber</color>
+</resources>
